@@ -11064,3 +11064,44 @@ section.resume-section .resume-section-content {
   visibility: visible;
   opacity: 1;
 }
+
+/* Custom animations for updates banner */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(157, 124, 97, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px 5px rgba(157, 124, 97, 0.3);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Hover effect for the banner */
+.updates-banner:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s ease;
+}
+
+.updates-banner {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
